@@ -1,3 +1,6 @@
+## Legacy Codebase
+This is an old web app that was built using v3 of Middleman App and Grunt (yikes). I can't even run the source on my machine so I'm just archiving it for posterity and the static `build` can be deployed for reference. What follows is the original `README`.
+
 maekan-middleman
 ================
 
