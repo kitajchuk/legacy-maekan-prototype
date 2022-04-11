@@ -1,0 +1,46 @@
+{
+    "audioListen": {
+        "id": "podcast",
+        "src": "/audio/Eulogy-for-Robert-Francis-Kennedy.mp3",
+        "channel": "bgm"
+    },
+    "audioInline": {
+        "id": "music",
+        "src": "/audio/Wavves-X-Cloud-Nothings-No-Life-For-Me.mp3",
+        "channel": "sfx",
+        "title": "Wavves X Cloud Nothings &mdash; <span class=\"em\">No Life For Me</span>"
+    },
+    "video": {
+        "id": "skate-create",
+        "src": "/video/Transworld-Skate-and-Create-2015-DVS-Shoes.mp4",
+        "poster": "/images/kop/skate-create.jpg",
+        "thumb": {
+            "id": "skate-create-thumb",
+            "src": "/video/Transworld-Skate-and-Create-2015-DVS-Shoes-Thumb.mp4"
+        },
+        "aspect": "cinema",
+        "title": "Transworld Skate and Create 2015 &mdash; DVS Shoes"
+    },
+    "videoAutoplay": {
+        "id": "rivals-loop",
+        "src": "/video/Rivals-Loop.mp4",
+        "aspect": "cinema",
+        "autoplay": true,
+        "loop": true
+    },
+    "carousel": {
+        "images": [
+            "/images/article/aiaiai-carousel-1.jpg",
+            "/images/article/aiaiai-carousel-2.jpg",
+            "/images/article/aiaiai-carousel-3.jpg"
+        ]
+    },
+    "belt": {
+        "images": [
+            "/images/kop/belt_01.jpg",
+            "/images/kop/belt_02.jpg",
+            "/images/kop/belt_04.jpg",
+            "/images/kop/belt_03.jpg"
+        ]
+    }
+}

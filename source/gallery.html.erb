@@ -1,0 +1,18 @@
+---
+title: Gallery
+controller: app
+---
+<%
+@collection = ordered_random_merge( data.feed, data.features )
+%>
+
+<section class="gallery js-gallery">
+    <section class="feed feed--center js-feed" data-page="0" data-pages="5">
+        <% @collection.each do |item| %>
+            <%= partial "partials/feeditem-gallery", :locals => { :item => item } %>
+        <% end %>
+    </section>
+</section>
+
+
+<%= partial "partials/gallery" %>

@@ -1,0 +1,16 @@
+---
+title: Links
+topic: Links
+controller: app
+---
+<%
+@collection = ordered_random_merge( data.links, data.links )
+%>
+<%= partial "partials/refine-label.erb" %>
+
+
+<section class="feed feed--center linklist js-feed" data-page="0" data-pages="1">
+    <% @collection.each do |item| %>
+        <%= partial "partials/feeditem-linklist", :locals => { :item => item } %>
+    <% end %>
+</section>

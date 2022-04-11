@@ -1,0 +1,67 @@
+// Modifiers
+.-cover {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.-cover--top {
+    background-position: 50% 0;
+    }
+.-cover--right {
+    background-position: 100% 50%;
+    }
+.-cover--bottom {
+    background-position: 50% 100%;
+    }
+.-cover--left {
+    background-position: 0 50%;
+    }
+
+
+.-is-lazy-loading {
+    opacity: 0;
+    }
+.-is-lazy-transition {
+    transition: opacity $ease-duration $ease-cubic;
+    }
+.-is-lazy-loaded {
+    opacity: 1;
+    }
+.-is-lazy-handled {
+    // Just a good hook
+    }
+
+
+.-text--center {
+    text-align: center;
+    }
+.-text--right {
+    text-align: right;
+    }
+.-text--left {
+    text-align: left;
+    }
+
+
+.-light {
+    color: $white;
+    }
+
+
+.-block {
+    display: block;
+    }
+
+
+.-span {
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .-light--mobile {
+        color: $white;
+        }
+}

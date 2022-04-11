@@ -1,0 +1,131 @@
+.cover {
+    display: block;
+    font-size: 0;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+
+    // Image position
+    &.is-left {
+        text-align: left;
+        }
+    &.is-center {
+        text-align: center;
+        }
+    &.is-right {
+        text-align: right;
+        }
+    }
+.cover--dark {
+    &:after {
+        background-color: $black;
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 0.4;
+        position: absolute;
+        right: 0;
+        top: 0;
+        }
+    }
+.cover.is-fullscreen {
+    height: auto;
+    padding: 0 !important;
+
+    .cover__image {
+        display: none;
+        }
+    .cover__image__mobile {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        }
+    .cover__lock {
+        bottom: 0;
+        height: auto;
+        opacity: 1 !important;
+        padding-bottom: $header-padding;
+        padding-left: $header-padding;
+        text-align: left;
+        top: auto;
+        transform: translate3d( 0, 0, 0 ) !important;
+        width: 100%;
+
+        &.is-middle:before {
+            display: none;
+            }
+        }
+    .cover__title,
+    .cover__meta {
+        color: $white !important;
+        }
+}
+.cover__image {
+    height: 100vh;
+    width: auto;
+    }
+.cover__image__mobile {
+    display: none;
+    }
+.cover__lock {
+    height: 33.33333%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translate3d( 0, -$navbar-size, 0 );
+    transition: transform $ease-duration $ease,
+                opacity $ease-duration $ease-cubic;
+    width: 50%;
+
+    // Element position
+    &.is-right {
+        left: auto;
+        right: 0;
+        }
+    &.is-left {
+        left: 0;
+        right: auto;
+        }
+
+    // Inner text position
+    &.is-middle {
+        bottom: auto;
+        height: 100%;
+        top: 0
+        }
+    &.is-bottom {
+        bottom: 0;
+        top: auto;
+        }
+    &.is-top {
+        bottom: auto;
+        top: 0;
+        }
+    }
+.cover__text {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    }
+.cover__title {
+    }
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .cover.is-fullscreen {
+        .cover__lock {
+            padding-bottom: $mobile-padding;
+            padding-left: $mobile-padding;
+            }
+    }
+
+    .cover__title {
+        font-size: 28px;
+        }
+    .cover__meta {
+        
+        }
+}

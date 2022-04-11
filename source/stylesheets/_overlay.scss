@@ -1,0 +1,15 @@
+.overlay {
+    background-color: $dark;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity $ease-duration $ease,
+                visibility $ease-duration $ease,
+                z-index $ease-duration $ease;
+    visibility: hidden;
+    //-webkit-backface-visibility: visible;
+    z-index: -1;
+    }

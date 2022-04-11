@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html manifest="">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- Mmmeta -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="apple-touch-icon-precomposed" href="http://maekan:m43k4n@52.25.229.84/images/touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="Maekan" />
+
+        <!-- Favicon -->
+        <%= favicon_tag "/favicon.png?v=0.2.0" %>
+
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title><%= current_page.data.title %> // Maekan</title>
+
+        <%= stylesheet_link_tag "screen" %>
+    </head>
+
+    <body>
+        <%= partial "partials/header" %>
+        <%= partial "partials/navbar" %>
+        <main class="pages js-pages">
+            <div class="page js-page">
+                <%= yield %>
+            </div>
+        </main>
+        <%= partial "partials/refine" %>
+        <%= partial "partials/overlay" %>
+        <%= partial "partials/loader" %>
+        <%= partial "partials/loadin" %>
+        <%= javascript_include_tag "dist/" + current_page.data.controller %>
+    </body>
+</html>

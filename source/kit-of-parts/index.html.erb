@@ -1,0 +1,169 @@
+---
+title: Kit of Parts
+controller: app
+---
+
+
+<section class="kit-of-parts js-kit-of-parts">
+    <section class="cover cover--dark js-cover -cover -text--center js-lazy-image" data-nav="is-navbar-light" data-img-src="/images/kop/palms.jpg">
+        <div class="valigner">
+            <div class="valigner__cell">
+                <img class="mark" src="/images/svg/icon--mk--light.svg" />
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Meta Data ]">
+        <div class="inner">
+            <span class="meta -span">Product / Music</span>
+            <span class="meta -span">June 19, 2015</span>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Lead-in ]">
+        <div class="inner">
+            <h2 class="h2">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. <span class="em">Pellentesque ornare</span> sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</h2>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Headline ]">
+        <div class="inner">
+            <h1 class="h1">
+                All hail Saint <span class="em">Iker of Móstoles</span> &mdash; the devourer of titles.
+            </h1>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Headline w/ Article Audio ]">
+        <div class="inner">
+            <h1 class="h1">
+                Duis mollis &mdash;<br />
+                <span class="em">Donec</span> sed odio dui
+            </h1>
+            <div class="article__play js-controller--audio lockup--play" data-target=".js-audio--<%= data.kop.audioListen.id %>">
+                <span class="icon--faux icon--play">
+                    <span class="icon--faux__wrap icon--play__wrap"></span>
+                </span>
+                <span class="meta -span">Listen to Article</span>
+                <%= partial "partials/audio", :locals => { :layout => data.kop.audioListen } %>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ In-line Audio ]">
+        <div class="inner">
+            <div class="lockup--play js-controller--audio" data-target=".js-audio--<%= data.kop.audioInline.id %>">
+                <span class="icon--faux icon--play">
+                    <span class="icon--faux__wrap icon--play__wrap"></span>
+                </span>
+                <span class="meta -span"><%= data.kop.audioInline.title %></span>
+                <%= partial "partials/audio", :locals => { :layout => data.kop.audioInline } %>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Paragraph Style ]">
+        <div class="inner">
+            <p class="p">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. <a class="a" href="http://newyorktimes.com/cooking/fuckoffwithyourcooking" target="_blank">Pellentesque</a> ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p class="p">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis.</p>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Quote Style 01 ]">
+        <div class="inner">
+            <blockquote class="bq">All hail Saint Iker of Móstoles &mdash; the devourer of titles; the keeper of records. One of only a handful of players to have won every major trophy on the planet with club and country.</blockquote>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop -text--center" data-section="[ Quote Style 02 ]">
+        <div class="inner">
+            <blockquote class="bq bq--big">All hail Saint Iker of Móstoles &mdash; the devourer of titles.</blockquote>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Caption ]">
+        <div class="inner">
+            <div class="caption">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Feed Title ]">
+        <div class="inner">
+            <a class="feed__item" href="#">
+                <div class="feed__lock">
+                    <div class="feed__title title a-link">Barbecue with Strangers &mdash; <span class="em">Seoul Korea</span></div>
+                    <div class="meta meta--locked">Food &amp; Culture / Tech</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ Feed Link ]">
+        <div class="inner">
+            <div class="feed__item feed__item--linklist">
+                <a class="linklist__lock headline js-linklist-item" href="https://medium.com/@awilkinson/slack-s-2-8-billion-dollar-secret-sauce-5c5ec7117908" target="_blank">
+                    <div class="linklist__title a-link">
+                        <span class="linklist__copyline">What Does $2.8 Billion Look Like in Design?</span> <span class="em">Ask Slack</span>.
+                    </div>
+                    <div class="linklist__meta meta meta--locked">
+                        <span class="linklist__url js-linklist-hostname">medium.com</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ In-line Video ]">
+        <%= partial "partials/video", :locals => { :layout => data.kop.video } %>
+    </section>
+
+
+    <section class="wrapper--hr kop" data-section="[ Autoplay Video ]">
+        <%= partial "partials/video", :locals => { :layout => data.kop.videoAutoplay } %>
+    </section>
+
+
+    <section class="wrapper wrapper--hr kop" data-section="[ In-line Carousel ]">
+        <div class="carousel js-carousel">
+            <ul class="carousel__items aspect--carousel">
+                <% data.kop.carousel.images.each do |image| %>
+                    <li class="carousel__items__li js-carousel-item js-carousel-image -cover" data-img-src="<%= image %>"></li>
+                <% end %>
+            </ul>
+            <div class="carousel__cap">
+                <div class="caption">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+            </div>
+            <div class="carousel__idx">
+                <span class="meta meta--bracks sans-text js-carousel-idx -span">1 / <%= data.kop.carousel.images.size %></span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper--hr kop" data-section="[ In-line Belt ]">
+        <div class="belt js-belt">
+            <div class="valigner">
+                <div class="valigner__cell">
+                    <div class="belt__line js-belt-line">
+                        <% data.kop.belt.images.each do |image| %>
+                            <img class="belt__image js-belt-image" data-img-src="<%= image %>" />
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script class="js-lazy-script" data-id="gs-draggable" data-src="/javascripts/dist/gs-draggable.js"></script>
+    </section>
+</section>

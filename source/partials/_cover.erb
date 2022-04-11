@@ -1,0 +1,17 @@
+<%
+@cover = data.covers[ 0 ]
+%>
+<a href="<%= @cover.url || '#' %>" class="cover js-cover js-controller--article wrapper <%= @cover.layout.image %>">
+    <img class="cover__image js-lazy-image" data-img-src="<%= @cover.image %>" />
+    <div class="cover__image__mobile js-lazy-image-mobile -cover" data-img-src="<%= @cover.image_mobile %>"></div>
+    <div class="cover__lock <%= @cover.layout.type %>">
+        <div class="valigner">
+            <div class="valigner__cell">
+                <div class="cover__text">
+                    <div class="cover__title headline a-link"><%= @cover.title %></div>
+                    <div class="cover__meta meta meta--locked"><%= @cover.category %></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>

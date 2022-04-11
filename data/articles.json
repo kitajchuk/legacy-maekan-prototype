@@ -1,0 +1,40 @@
+[
+    {
+        "title": "AIAIAI Drops the New <span class=\"em\">TMA-2 Modular</span> Headphones",
+        "pageTitle": "AIAIAI Modular Headphones",
+        "category": "Product / Music",
+        "image": "/images/article/aiaiai-cover.jpg",
+        "image_mobile": "",
+        "feature": true,
+        "inverted_type": false,
+        "date": "June 19, 2015",
+        "audioListen": {
+            "id": "podcast",
+            "src": "/audio/Eulogy-for-Robert-Francis-Kennedy.mp3",
+            "channel": "bgm"
+        },
+        "audioInline": {
+            "id": "music",
+            "src": "/audio/Wavves-X-Cloud-Nothings-No-Life-For-Me.mp3",
+            "channel": "sfx",
+            "title": "Wavves X Cloud Nothings &mdash; <span class=\"em\">No Life For Me</span>"
+        },
+        "video": {
+            "id": "instrument-reel",
+            "src": "/video/TMA-2-Modular-Headphone-Assembly-Instruction.webm|/video/TMA-2-Modular-Headphone-Assembly-Instruction.mp4",
+            "poster": "/images/article/aiaiai-poster.jpg",
+            "thumb": {
+                "id": "instrument-reel-thumb",
+                "src": "/video/TMA-2-Modular-Headphone-Assembly-Instruction-Thumb.webm|/video/TMA-2-Modular-Headphone-Assembly-Instruction-Thumb.mp4"
+            },
+            "aspect": "cinema"
+        },
+        "carousel": {
+            "images": [
+                "/images/article/aiaiai-carousel-1.jpg",
+                "/images/article/aiaiai-carousel-2.jpg",
+                "/images/article/aiaiai-carousel-3.jpg"
+            ]
+        }
+    }
+]

@@ -1,0 +1,178 @@
+.refine {
+    font-size: 0;
+    text-align: center;
+    }
+.refine * {
+    pointer-events: none;
+    }
+.refine__sort__li,
+.refine__filter__li {
+    pointer-events: auto;
+    }
+.refine__sort,
+.refine__filter {
+    display: inline-block;
+    vertical-align: top;
+    }
+.refine__sort {
+    margin-right: $mobile-padding;
+    text-align: right;
+    }
+.refine__filter {
+    margin-left: $mobile-padding;
+    text-align: left;
+    }
+.refine__sort__li {
+    cursor: pointer;
+    display: block;
+    }
+.refine__filter__ul {
+    padding-top: 6px;
+    }
+.refine__filter__li {
+    cursor: pointer;
+    display: block;
+    position: relative;
+
+    &:after {
+        background-color: transparent;
+        border-radius: 3px;
+        content: "";
+        display: inline-block;
+        height: 6px;
+        margin-left: 15px;
+        position: relative;
+        transition: background-color $ease-duration $ease;
+        vertical-align: middle;
+        width: 6px;
+        }
+    &.is-active:after {
+        background-color: $white;
+        }
+    }
+
+
+
+// Sort / Filter contextuals
+.refine-label {
+    display: none;
+    padding-bottom: $feed-padding;
+    padding-left: ($feed-padding * 2);
+    padding-right: ($feed-padding * 2);
+    padding-top: 58px;
+
+    span {
+        @include display-medium();
+        }
+
+    &.is-active {
+        display: block;
+        }
+    }
+
+
+
+// Fixed refine button...
+.refine-button {
+    bottom: $refine-spacing;
+    font-size: 0;
+    height: $refine-size;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    right: $refine-spacing;
+    transition: opacity $ease-duration $ease-cubic,
+                visibility $ease-duration $ease;
+    width: $refine-size;
+    z-index: ($z_layer_infront + 1);
+
+    &.is-inactive {
+        opacity: 0;
+        visibility: hidden;
+        }
+    }
+
+
+
+.refine-button__icon {
+    left: 50%;
+    margin-left: -($icon-size / 2);
+    margin-top: -($icon-size / 2);
+    position: absolute;
+    top: 50%;
+    transition: opacity $ease-duration $ease-cubic,
+                transform $ease-duration $ease,
+                visibility $ease-duration $ease;
+    }
+.refine-button__close {
+    opacity: 0;
+    transform: translate3d( 0, 100%, 0 );
+    visibility: hidden;
+    }
+.refine-button__open {
+    }
+
+.refine-button.is-active {
+    .refine-button__close {
+        opacity: 1;
+        transform: translate3d( 0, 0, 0 );
+        visibility: visible;
+        }
+    .refine-button__open {
+        opacity: 0;
+        transform: translate3d( 0, -100%, 0 );
+        visibility: hidden;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-laptop-full ) {
+    .refine-label {
+        padding-top: 61px;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-laptop-medium ) {
+    .refine-label {
+        padding-top: 64px;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .refine-button {
+        bottom: ($mobile-padding / 2);
+        right: ($mobile-padding / 2);
+        }
+
+    .refine-label {
+        font-size: $title-size-small-px;
+        padding-left: $mobile-padding;
+
+        &.is-active {
+            padding-bottom: $mobile-padding;
+            padding-left: $mobile-padding;
+            padding-right: $mobile-padding;
+            padding-top: 0;
+            }
+        }
+
+    .refine__sort,
+    .refine__filter {
+        display: block;
+        margin: 0;
+        text-align: left;
+        }
+    .refine__sort {
+        margin-bottom: $item-padding - 10px;
+        }
+    .refine__sort__li,
+    .refine__filter__li {
+        font-size: 26px;
+        line-height: 1.66666667;
+        }
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html manifest="">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- Mmmeta -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="apple-touch-icon-precomposed" href="http://maekan:m43k4n@52.25.229.84images/touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="Maekan" />
+
+        <!-- Favicon -->
+        <link href="//favicon.png?v=0.2.0" rel="icon" type="image/0" />
+
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title>News // Maekan</title>
+
+        <link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header class="header js-header">
+    <section class="header__col">
+        <button class="button header__icon header__list js-controller--navbar">
+            <span class="icon--faux icon--list js-navbar-toggle">
+                <span class="icon--faux__wrap icon--list__wrap"></span>
+            </span>
+        </button>
+    </section>
+    <section class="header__col header__utility js-utility">
+        <button class="button header__icon header__audio js-audio-wave">
+            <span class="icon--faux icon--audio">
+                <span class="icon--faux__wrap icon--audio__wrap">
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                </span>
+            </span>
+        </button>
+    </section>
+</header>
+        <nav class="navbar js-navbar">
+    <div class="navbar__wrap">
+        <ul class="nav">
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/index.html" data-topic="Everything">Feed</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/features/index.html" data-topic="Features">Features</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item is-active" href="news/index.html" data-topic="News">News</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/links/index.html" data-topic="Links">Links</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/gallery/index.html" data-topic="">Gallery</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/search/index.html" data-topic="">Search</a>
+                </li>
+        </ul>
+        <ul class="subnav">
+                <li class="subnav__li">
+                    <a class="subnav__a title__grey__medium js-subnav-item " href="#">About</a>
+                </li>
+                <li class="subnav__li">
+                    <a class="subnav__a title__grey__medium js-subnav-item " href="#">Follow Us</a>
+                </li>
+                <li class="subnav__li">
+                    <a class="subnav__a title__grey__medium js-subnav-item " href="#">Legal</a>
+                </li>
+        </ul>
+    </div>
+    <a href="/account/index.html" class="navbar__account">
+        <span class="avatar js-lazy-image -span -cover js-account-avatar" data-img-src="/images/avatar.jpg"></span>
+        <span class="navbar__account__name title__grey__small -span">Eugene Kan</span>
+    </a>
+</nav>
+        <main class="pages js-pages">
+            <div class="page js-page">
+                <section class="refine-label js-refine-label title"></section>
+
+
+<section class="feed feed--center js-feed" data-page="0" data-pages="5">
+        <a class="feed__item" href="articles/aiaiai-modular-headphones/">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/tma_2_modular_p.dd307122606.original.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">AIAIAI Drops the New <span class="em">TMA-2 Modular Headphones</span></div>
+        <div class="meta meta--locked">Product / Tech / Music</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/FS-Portfoli-Gris-34-1220x864.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">A Celebration of <span class="em">Plants in Contemporary Art</span></div>
+        <div class="meta meta--locked">Art &amp; Design</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/etq-amsterdam-low-1-black-gioia-fitb.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">ETQ</span> Build On Dutch Classics</div>
+        <div class="meta meta--locked">Fashion / Product</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/20150405_IMG_7247_HH-1376x-c-f.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">Get Away Japan &mdash; <span class="em">Awaji Island</span></div>
+        <div class="meta meta--locked">Food &amp; Culture</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/NosajThing_PressPhoto_Jan15.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">Innovative Leisure &mdash; <span class="em">Nosaj Thing</span></div>
+        <div class="meta meta--locked">Music / Tech</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/lapka_bam_red_splatter_front.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Lapkas BAM</span> &mdash; The Test Take on a New Meaning</div>
+        <div class="meta meta--locked">Tech / Product</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/untitled-article-1427211799.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">One Last Rave &mdash; <span class="em">Jammie XX</span> Homage to Club Culture</div>
+        <div class="meta meta--locked">Music / Food &amp; Culture</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/Stadium-Stand-on-the-Malecon.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Colour in Havana</span> &mdash; A Photo Essay</div>
+        <div class="meta meta--locked">Food &amp; Culture</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/sunflowerbean.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">From a Sunflower Bean</span>, A Mighty Sound Grows</div>
+        <div class="meta meta--locked">Business / Fashion</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/raheem-sterling-gsj-3-1280x0-c-default.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Ross and Raheem</span> &mdash;<br />Before The Tipping Point</div>
+        <div class="meta meta--locked">Sport / Fashion</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/00-holding-heather-woods-broderick-premiere.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Sharon van Etten&rsquo;s</span> Backup Singer Moves Center Stage</div>
+        <div class="meta meta--locked">Art &amp; Design</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/skepta.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Skepta&rsquo;s Leading Grime</span> into the Future by Returning to its Roots</div>
+        <div class="meta meta--locked">Music</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/leica-q-camera-1_edit.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">The New <span class="em">Leica Q</span> Is the Perfect Fusion of Style and Functionality</div>
+        <div class="meta meta--locked">Product / Tech</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/CP_prolific06.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Transforming the Humble Sneaker</span> into an Elevated Menswear Staple</div>
+        <div class="meta meta--locked">Fashion / Business</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/vincestaples.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Vince Staples</span> &mdash; &ldquo;Whether It&rsquo;s Violent Or Not, Take Action&rdquo;</div>
+        <div class="meta meta--locked">Music</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/Nike_Running_on_Apple_Watch_original.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Nike+ Running App</span> Launches on Apple Watch</div>
+        <div class="meta meta--locked">Product / Tech</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/launch-date-bgA.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><span class="em">Rift</span> &mdash; The Next Generation </div>
+        <div class="meta meta--locked">Product / Tech</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/Under-the-Influence-Magazine-AW-2014-The-Art-Issue-Erika-Wall-Janneke-Van-der-Hagen-2.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">Under the Influence <span class="em">Issue 15 / Paradise</span></div>
+        <div class="meta meta--locked">Fashion</div>
+    </div>
+</a>
+        <a class="feed__item" href="#">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="/images/feed/artophoto.jpg" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link">Let Us Roam &mdash; <span class="em">Arto Saari</span></div>
+        <div class="meta meta--locked">Sports / Art &amp; Design</div>
+    </div>
+</a>
+</section>
+            </div>
+        </main>
+        <button class="refine-button button button--dark js-controller--refine is-inactive">
+    <span class="refine-button__icon refine-button__open icon icon--refine js-icon-refine"></span>
+    <span class="refine-button__icon refine-button__close icon icon--check js-icon-check"></span>
+</button>
+
+
+<section class="refine js-refine screen">
+    <div class="screen__wrap valigner">
+        <div class="valigner__cell">
+            <div class="refine__sort">
+                <div class="screen__label">Sort</div>
+                <ul class="refine__sort__ul">
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Everything">Everything</li>
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Popular">Popular</li>
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Features">Features</li>
+                        <li class="refine__sort__li title__grey js-refine-topic is-active" data-topic="News">News</li>
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Links">Links</li>
+                </ul>
+            </div>
+            <div class="refine__filter">
+                <div class="screen__label">Filter</div>
+                <ul class="refine__filter__ul">
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Art &amp; Design</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Business</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Fashion</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Food &amp; Culture</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Music</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Product</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Sports</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Tech</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Travel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+        <div class="overlay js-overlay"></div>
+        <div class="loader js-controller--load">
+    <span class="icon icon--arrow-down"></span>
+</div>
+        <section class="loadin js-loadin screen is-active">
+    <div class="valigner">
+        <div class="valigner__cell">
+            <img class="maekan" src="/images/svg/icon--mae--light.svg" />
+            <img class="maekan" src="/images/svg/icon--kan--light.svg" />
+        </div>
+    </div>
+    <div class="loadin__bar js-bar"></div>
+</section>
+        <script src="/javascripts/dist/app.js" type="text/javascript"></script>
+    </body>
+</html>

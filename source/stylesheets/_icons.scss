@@ -1,0 +1,310 @@
+.icon {
+    color: inherit;
+    display: inline-block;
+    font-family: $icon-font;
+    font-size: $icon-size;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+    vertical-align: middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+.icon--light {
+    color: $white;
+    }
+.icon--arrow-left-thin:before {
+    content: "\e600";
+    }
+.icon--arrow-left:before {
+    content: "\e601";
+    }
+.icon--arrow-right-thin:before {
+    content: "\e602";
+    }
+.icon--arrow-right:before {
+    content: "\e603";
+    }
+.icon--check:before {
+    content: "\e604";
+    }
+.icon--clock:before {
+    content: "\e605";
+    }
+.icon--exit:before {
+    content: "\e606";
+    }
+.icon--hyperlink {
+    font-size: $mobile-padding;
+    margin-left: -8px;
+    }
+.icon--hyperlink:before {
+    content: "\e607";
+    }
+/*
+.icon--list:before {
+    content: "\e608";
+    }
+*/
+.icon--refine:before {
+    content: "\e609";
+    }
+.icon--search:before {
+    content: "\e60a";
+    }
+.icon--more:before {
+    content: "\e60b";
+    }
+.icon--arrow-down:before {
+    content: "\e60a";
+    }
+
+
+
+// Custom Icons
+.icon--faux {
+    display: inline-block;
+    text-align: center;
+    }
+.icon--faux__wrap {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    }
+
+
+
+.icon--play {
+    width: 16px;
+    }
+.icon--play__wrap {
+    // Together these make the height
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+
+    // This makes the width
+    border-left: 12px solid $dark;
+    height: 0;
+    width: 0;
+    }
+.is-active > .icon--play .icon--play__wrap {
+    border: 0;
+    height: 16px;
+    width: 13px;
+
+    &:after,
+    &:before {
+        background-color: $dark;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 5px;
+        }
+    &:after {
+        left: auto;
+        right: 0;
+        }
+    }
+.icon--light .icon--play__wrap {
+    border-left-color: $white;
+
+    &:after,
+    &:before {
+        background-color: $white;
+        }
+    }
+
+
+
+.icon--list {
+    }
+.icon--list__wrap {
+    border-top: 2px solid $dark;
+    height: 18px;
+    width: 24px;
+
+    &:after,
+    &:before {
+        background-color: $dark;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        }
+    &:after {
+        bottom: 0;
+        width: 20px;
+        }
+    &:before {
+        margin-top: -2px;
+        top: 50%;
+        width: 15px;
+        }
+    }
+
+
+
+.icon--audio {
+    }
+.icon--audio__wrap {
+    height: 19px;
+    width: 22px;
+    }
+.icon--audio__bar {
+    animation-duration: $ease-duration * 3;
+    animation-iteration-count: infinite;
+    background-color: $dark;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transform: translate3d( 0, 50%, 0 );
+    transition: transform $ease-duration $ease;
+    width: 2px;
+
+    &:nth-child(1) {
+        }
+    &:nth-child(2) {
+        animation-delay: 100ms;
+        left: 5px;
+        }
+    &:nth-child(3) {
+        animation-delay: 200ms;
+        left: 10px;
+        }
+    &:nth-child(4) {
+        animation-delay: 250ms;
+        left: 15px;
+        }
+    &:nth-child(5) {
+        animation-delay: 150ms;
+        left: 20px;
+        }
+    }
+
+
+
+@keyframes bar_1 {
+    0% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    25% {
+        transform: translate3d( 0, 0%, 0 );
+    }
+
+    50% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    75% {
+        transform: translate3d( 0, 20%, 0 );
+    }
+
+    100% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+}
+
+
+
+@keyframes bar_2 {
+    0% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    25% {
+        transform: translate3d( 0, 30%, 0 );
+    }
+
+    50% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    75% {
+        transform: translate3d( 0, 0%, 0 );
+    }
+
+    100% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+}
+
+
+
+@keyframes bar_3 {
+    0% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    25% {
+        transform: translate3d( 0, 10%, 0 );
+    }
+
+    50% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    75% {
+        transform: translate3d( 0, 20%, 0 );
+    }
+
+    100% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+}
+
+
+
+@keyframes bar_4 {
+    0% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    25% {
+        transform: translate3d( 0, 0%, 0 );
+    }
+
+    50% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    75% {
+        transform: translate3d( 0, 30%, 0 );
+    }
+
+    100% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+}
+
+
+
+@keyframes bar_5 {
+    0% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    25% {
+        transform: translate3d( 0, 20%, 0 );
+    }
+
+    50% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+
+    75% {
+        transform: translate3d( 0, 0%, 0 );
+    }
+
+    100% {
+        transform: translate3d( 0, 50%, 0 );
+    }
+}

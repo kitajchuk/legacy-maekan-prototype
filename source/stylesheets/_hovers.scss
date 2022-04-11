@@ -1,0 +1,52 @@
+.is-hoverable {
+/******************************************************************************
+ * General Elements
+*******************************************************************************/
+    .a:hover {
+        }
+    .a:hover:after {
+        opacity: 1;
+        transform: translate3d( 0, -99%, 0 );
+        visibility: visible;
+        }
+
+    .a-link:hover {
+        border-color: $dark;
+        }
+
+
+
+/******************************************************************************
+ * Gallery
+*******************************************************************************/
+    .gallery-overlay__icon:hover,
+    .gallery-overlay__nav:hover .gallery-overlay__icon {
+        opacity: 1;
+        transform: translate3d( 0, 0, 0 );
+        }
+
+
+
+/******************************************************************************
+ * Account
+*******************************************************************************/
+    .account__nav {
+        .subnav__a:hover {
+            color: $dark;
+            }
+    }
+
+
+
+/******************************************************************************
+ * Mixins
+*******************************************************************************/
+    // ani-grey-type
+    .nav__a:hover,
+    .subnav__a:hover,
+    .navbar__account:hover span,
+    .refine__sort__li:hover,
+    .refine__filter__li:hover {
+        color: $grey-medium;
+        }
+}

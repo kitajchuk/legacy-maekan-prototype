@@ -1,0 +1,24 @@
+.loader {
+    background-color: $dark;
+    bottom: 0;
+    color: $white;
+    cursor: pointer;
+    height: $navbar-size;
+    line-height: $navbar-size;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    transform: translate3d( 0, 100%, 0 );
+    width: 100%;
+
+    &.is-inactive {
+        transition: transform $midi-duration $ease;
+        transform: translate3d( 0, 100%, 0 ) !important;
+        }
+    }
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    
+}

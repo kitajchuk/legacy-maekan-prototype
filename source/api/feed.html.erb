@@ -1,0 +1,5 @@
+<%
+@collection = ordered_random_merge( data.feed, data.links )
+@collection = ordered_random_merge( @collection, data.features )
+%>
+<% @collection.each do |item| %><% if item.linklist %><%= partial "partials/feeditem-linklist", :locals => { :item => item } %><% else %><%= partial "partials/feeditem", :locals => { :item => item } %><% end %><% end %>

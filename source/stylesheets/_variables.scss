@@ -1,0 +1,135 @@
+// Fonts
+$serif-text: "Lyon Text Web";
+$serif-display: "Lyon Display Web";
+$sans-serif-text: "Founders Grotesk Text Web";
+$sans-serif-display: "Founders Grotesk Web";
+$icon-font: "maekan";
+$icon-uuid: "98ln8n";
+$icon-size: 36px;
+$icon-gallery-arrow-size: 64px;
+$icon-gallery-arrow-width: 20px;
+
+
+// Colors
+$black: #000;
+$white: #fff;
+$dark: #111;
+$spot: #2414cc;
+$spot-dark: #0f0f99;
+$spot-light: #401aff;
+$grey-dark: #807e7e;
+$grey-medium: #bfbfbf;
+$grey-light: #f0f0f0;
+$grey-ultralight: #e1e1e1;
+$grey-links: #8f8f8f;
+$grey-caption: #474747;
+$grey-border: #d7d7d7;
+$grey-ui-scrubber: rgba( 233, 233, 233, 0.75 );
+$spot-ui-progress: #1d29c9;
+
+
+
+// Grid
+$grid-length: 12;
+$grid-columns: 12 11 10 9 8 7 6 5 4 3 2 1;
+
+
+
+// Sizes
+$navbar-size: 80px;
+$drawer-size: 340px;
+$sidebar-size: $drawer-size;
+$refine-size: 60px;
+$item-padding: $navbar-size;
+$feed-padding: $navbar-size;
+$feed-margin: (200px + $item-padding);
+$mobile-padding: 30px;
+$refine-spacing: 50px;
+$header-padding: 70px;
+$inner-size: 815px;
+$audio-wave-size: 30px;
+$player-scrub-size: 4px;
+$player-scrub-size-big: 16px;
+$player-thumb-size: 260px;
+$bq-width: 530px;
+$bq-width-big: 1000px;
+$caption-width: 500px;
+
+
+
+// Font sizes
+$h2-size: 44px;
+$bq-size: 38px;
+
+$title-size-px: 32px;
+$title-size-serif-px: 30px;
+$title-size-medium-px: 28px;
+$title-size-medium-serif-px: 26px;
+$title-size-small-px: 24px;
+$title-size-small-serif-px: 22px;
+
+$title-size-big-px: 44px;
+$title-size-big-vw: 2vw;
+$title-size-big-serif-vw: 1.9vw;
+$title-size-big-serif-px: 42px;
+$title-size-big-medium-px: 32px;
+$title-size-big-medium-serif-px: 30px;
+
+$h1-size: 56px;
+$h1-size-small: 40px;
+
+$p-size: 22px;
+$p-size-medium: 20px;
+$p-size-small: 18px;
+
+$meta-size: 18px;
+$meta-size-medium: 16px;
+$meta-size-small: 14px;
+
+$bq-size-big: 70px;
+$bq-size-small: 32px;
+
+
+
+// Breakpoints
+$break-desktop-large: 2200px;
+$break-desktop: 1920px;
+$break-laptop-full: 1680px;
+$break-laptop-medium: 1440px;
+$break-tablet-full: 1280px;
+$break-tablet-medium: 1024px;
+$break-tablet-small: 768px;
+$break-mobile-full: $break-tablet-small;
+$break-mobile-medium: 640px;
+$break-mobile-small: 320px;
+$break-mobile-height: 628px;
+$break-navbar-mobile: ($drawer-size + $navbar-size);
+
+
+// Animations
+$ease: ease;
+$ease-in: ease-in;
+$ease-out: ease-out;
+$ease-in-out: ease-in-out;
+$ease-cubic: cubic-bezier( 0.77, 0, 0.175, 1 );
+$long-duration: 1000ms;
+$anim-duration: 800ms;
+$ease-duration: 600ms;
+$midi-duration: 400ms;
+$swip-duration: 300ms;
+$fast-duration: 200ms;
+
+
+// Z-Layers
+$z_layer_10: 100;
+$z_layer_09: 90;
+$z_layer_08: 80;
+$z_layer_07: 70;
+$z_layer_06: 60;
+$z_layer_05: 50;
+$z_layer_04: 40;
+$z_layer_03: 30;
+$z_layer_02: 20;
+$z_layer_01: 10;
+$z_layer_behind: -1;
+$z_layer_infront: 1000;

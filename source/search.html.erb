@@ -1,0 +1,16 @@
+---
+title: Search
+controller: app
+---
+<form class="search js-search" action="/search/" method="post">
+    <section class="search__field js-search-field wrapper">
+        <div class="search__bar">
+            <input class="form__text search__input search__suggest js-search-suggest headline" type="text" placeholder="" />
+            <input class="form__text search__input search__query js-search-input headline" type="text" placeholder="Search" />
+        </div>
+    </section>
+
+
+    <section class="feed feed--center js-feed js-search-results" data-page="0" data-pages="1">
+    </section>
+</form>

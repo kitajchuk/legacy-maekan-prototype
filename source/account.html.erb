@@ -1,0 +1,53 @@
+---
+title: Account
+controller: app
+---
+<%
+@collection = ordered_random_merge( data.feed, [] ).slice( 0, 5 )
+%>
+
+
+<section class="account js-account wrapper">
+    <section class="account__nav">
+        <div class="account__fix">
+            <div class="account__name title">Eugene Kan</div>
+            <ul class="subnav">
+                <% data.user.navigation.each do |nav| %>
+                    <li class="subnav__li">
+                        <a class="subnav__a title__grey__medium <% if !nav.is_logout && nav.url %>js-toggle<% end %>" href="<%= nav.url || '#' %>"><%= nav.title %></a>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    </section>
+    <section class="account__pages js-account-pages">
+        <div class="views account__views">
+            <div class="views__page js-toggle-view" id="readinglist">
+                <ul class="reading-list">
+                    <% @collection.each do |item| %>
+                        <li class="reading-list__li">
+                            <a href="<%= item.url || '#' %>" class="reading-list__a">
+                                <div class="reading-list__cover">
+                                    <img class="reading-list__image js-lazy-image" data-img-src="<%= item.image %>" />
+                                </div>
+                                <div class="reading-list__lock">
+                                    <div class="reading-list__title title a-link"><%= item.title %></div>
+                                    <div class="reading-list__tag meta meta--locked"><%= item.category %></div>
+                                </div>
+                            </a>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            <div class="views__page js-toggle-view" id="edit">
+                <div class="account__avatar">
+                    <div class="account__image avatar avatar--big js-account-avatar js-lazy-image -span -cover" data-img-src="<%= data.user.avatar %>"></div>
+                    <input type="file" class="account__avatar__file js-account-avatar-uploader" />
+                </div>
+            </div>
+            <div class="views__page js-toggle-view" id="settings">
+                <div class="h1">Settings</div>
+            </div>
+        </div>
+    </section>
+</section>

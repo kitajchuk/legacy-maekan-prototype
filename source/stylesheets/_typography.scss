@@ -1,0 +1,304 @@
+/******************************************************************************
+ * Meta Data
+*******************************************************************************/
+.meta {
+    @include meta-type();
+    }
+.meta--locked {
+    margin-top: 15px;
+    }
+.meta + .meta {
+    margin-left: ($feed-padding / 2);
+    }
+.meta--bracks {
+    &:before {
+        content: "[ ";
+        }
+    &:after {
+        content: " ]";
+        }
+    }
+
+.caption {
+    color: $grey-caption;
+    display: inline-block;
+    font-size: $meta-size;
+    line-height: 1.44444444;
+    max-width: $caption-width;
+    text-align: left;
+    width: 100%;
+    @include font-sans-text();
+    @include text-regular();
+    }
+
+
+
+/******************************************************************************
+ * Emphasis
+*******************************************************************************/
+.em {
+    @include display-medium();
+    }
+
+
+
+/******************************************************************************
+ * Paragraphs
+*******************************************************************************/
+.p {
+    @include p();
+    }
+.p + .p {
+    margin-top: ($feed-padding / 2);
+    }
+.p--col {
+    max-width: 750px;
+    width: 100%;
+    }
+
+
+
+/******************************************************************************
+ * Links
+*******************************************************************************/
+.a {
+    color: $grey-links;
+    border-bottom: 1px solid $grey-links;
+    position: relative;
+    transition: color $ease $ease-duration,
+                border-color $ease $ease-duration;
+    }
+.a:after {
+    background-color: $dark;
+    color: $white;
+    content: attr( href );
+    font-size: $meta-size;
+    left: 50%;
+    line-height: 1;
+    margin-left: -125px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 20px;
+    pointer-events: auto;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    transform: translate3d( 0, -50%, 0 );
+    transition: opacity $midi-duration $ease-cubic,
+                transform $midi-duration $ease,
+                visibility $midi-duration $ease;
+    visibility: hidden;
+    white-space: nowrap;
+    width: 250px;
+    }
+.a-link {
+    border-bottom: 1px solid transparent;
+    display: inline;
+    transition: border-color $fast-duration $ease;
+    }
+
+
+
+/******************************************************************************
+ * Quotes
+*******************************************************************************/
+.bq {
+    @include bq();
+    display: inline-block;
+    max-width: $bq-width;
+    text-align: left;
+    width: 100%;
+
+    &:before {
+        content: "\201C";
+        }
+    &:after {
+        content: "\201D";
+        }
+    }
+.bq--big {
+    font-size: $bq-size-big;
+    line-height: 1.28571429;
+    max-width: $bq-width-big;
+    width: 100%;
+    }
+
+
+
+/******************************************************************************
+ * Headlines
+*******************************************************************************/
+.h6,
+.h5,
+.h4,
+.h3,
+.h2,
+.h1 {
+    }
+
+
+.h1 {
+    @include h1();
+    }
+.h2 {
+    @include h2();
+    }
+
+
+
+/******************************************************************************
+ * Titles
+*******************************************************************************/
+.headline {
+    @include title-type-lock();
+    }
+.headline__serif {
+    @include title-type-lock-serif();
+    }
+.title {
+    @include title-image-lock();
+    }
+.title__serif {
+    @include title-image-lock-serif();
+    }
+.title__grey {
+    @include type-lock-grey();
+    }
+.title__grey__medium {
+    @include type-lock-grey-medium();
+    }
+.title__grey__small {
+    @include type-lock-grey-small();
+    }
+
+
+
+/******************************************************************************
+ * General Purpose
+*******************************************************************************/
+// Sans-serif - Founders
+.sans-text {
+    @include font-sans-text();
+    }
+.sans-display {
+    @include font-sans-display();
+    }
+
+
+// Serif - Lyon
+.serif-text {
+    @include font-serif-text();
+    }
+.serif-display {
+    @include font-serif-display();
+    }
+
+
+// Weights + Styles
+.text--regular {
+    @include text-regular();
+    }
+.text--regular-italic {
+    @include text-regular-italic();
+    }
+.text--semibold {
+    @include text-semibold();
+    }
+.text--semibold-italic {
+    @include text-semibold-italic();
+    }
+
+
+.display--light {
+    @include display-light();
+    }
+.display--light-italic {
+    @include display-light-italic();
+    }
+.display--medium {
+    @include display-medium();
+    }
+.display--medium-italic {
+    @include display-medium-italic();
+    }
+.display--regular {
+    @include display-regular();
+    }
+.display--semibold {
+    @include display-semibold();
+    }
+
+
+
+@media only screen and ( min-width: $break-desktop-large ) {
+    .h2,
+    .headline {
+        font-size: $title-size-big-px;
+        }
+    .headline__serif {
+        font-size: $title-size-big-serif-px;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-laptop-full ) {
+    .h2,
+    .headline {
+        font-size: $title-size-big-medium-px;
+        }
+    .headline__serif {
+        font-size: $title-size-big-medium-serif-px;
+        }
+    .title,
+    .title__grey {
+        font-size: $title-size-medium-px;
+        }
+    .title__serif {
+        font-size: $title-size-medium-serif-px;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-laptop-medium ) {
+    .title,
+    .title__grey {
+        font-size: $title-size-small-px;
+        }
+    .title__serif {
+        font-size: $title-size-small-serif-px;
+        }
+    .title__grey__medium {
+        font-size: $meta-size;
+        }
+    .p {
+        font-size: $p-size-medium;
+        }
+    .meta,
+    .caption {
+        font-size: $meta-size-medium;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .p {
+        font-size: $p-size-small;
+        }
+    .h1 {
+        font-size: $h1-size-small;
+        }
+    .bq,
+    .bq--big {
+        font-size: $bq-size-small;
+        }
+    .meta,
+    .caption {
+        font-size: $meta-size-small;
+        }
+    .meta--locked {
+        margin-top: 10px;
+        }
+}

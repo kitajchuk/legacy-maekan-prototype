@@ -1,0 +1,21 @@
+.pages {
+    background-color: $white;
+    transition: transform $ease-duration $ease-cubic,
+                background-color $ease-duration $ease;
+    }
+
+
+.page {
+    background-color: $white;
+    width: 100%;
+    transition: opacity $ease-duration $ease-cubic,
+                transform $ease-duration $ease,
+                background-color $ease-duration $ease;
+
+    &.is-reactive {
+        transform: translate3d( 0, $navbar-size, 0 );
+        }
+    &.is-inactive {
+        opacity: 0;
+        }
+    }

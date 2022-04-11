@@ -1,0 +1,20 @@
+.form {
+    }
+
+
+
+.form__radio,
+.form__checkbox {
+    display: none;
+    -webkit-appearance: none;
+    }
+
+
+
+.form__label {
+    }
+.form__label__text,
+.form__label__input {
+    display: inline-block;
+    vertical-align: middle;
+    }

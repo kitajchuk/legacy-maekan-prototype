@@ -1,0 +1,262 @@
+/******************************************************************************
+ * Video Player
+*******************************************************************************/
+.video {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: relative;
+    text-align: center;
+    transition: opacity $ease-duration $ease-cubic;
+    user-select: none;
+    width: 100%;
+    }
+.video__video {
+    position: relative;
+    width: 100%;
+    }
+.video__poster,
+.video__scrubber,
+.video__progress,
+.video__title {
+    position: absolute;
+    }
+.video__poster {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: opacity $ease-duration $ease-cubic,
+                visibility $ease-duration $ease-cubic;
+
+    &.is-inactive {
+        opacity: 0;
+        visibility: hidden;
+        }
+
+    &.is-masked:after {
+        background-color: $dark;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        width: 100%;
+        }
+    }
+.video__title {
+    color: $white;
+    left: 0;
+    text-align: center;
+    top: 50%;
+    transition: opacity $ease-duration $ease-cubic,
+                visibility $ease-duration $ease-cubic;
+    width: 100%;
+
+    &.is-inactive {
+        opacity: 0;
+        visibility: hidden;
+        }
+    }
+.video__scrubber {
+    background-color: $grey-ui-scrubber;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    transition: height $midi-duration $ease-cubic;
+    width: 100%;
+    }
+.video__progress {
+    background-color: $spot-ui-progress;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    }
+.video__thumb {
+    bottom: $player-scrub-size-big;
+    border: $player-scrub-size solid $dark;
+    left: 0;
+    margin-left: -($player-thumb-size / 2);
+    opacity: 0;
+    position: absolute;
+    transition: opacity $midi-duration $ease-cubic,
+                bottom $midi-duration $ease-cubic,
+                visibility $midi-duration $ease;
+    visibility: hidden;
+    width: $player-thumb-size;
+
+    &.is-active {
+        bottom: ($player-scrub-size-big * 2);
+        opacity: 1;
+        visibility: visible;
+        }
+    }
+
+
+
+// Video hovered state
+.video.is-loaded  {
+    opacity: 1;
+}
+.video.is-hovered {
+    .media__time,
+    .media__duration {
+        bottom: -30px;
+        opacity: 1;
+        }
+
+    .video__scrubber {
+        height: $player-scrub-size;
+
+        &.is-hovered {
+            height: $player-scrub-size-big;
+            }
+        }
+}
+
+
+
+/******************************************************************************
+ * Audio Player
+*******************************************************************************/
+.audio {
+    font-size: 0;
+    user-select: none;
+    }
+.audio--inline {
+    margin-top: 10px;
+    padding-left: 36px;
+    }
+.audio__track {
+    display: inline-block;
+    height: $player-scrub-size-big;
+    position: relative;
+    vertical-align: bottom;
+    width: 100%;
+    }
+.audio__scrubber {
+    background-color: #ccc;
+    bottom: 0;
+    height: $player-scrub-size / 2;
+    left: 0;
+    position: absolute;
+    transition: width $ease-duration $ease-cubic,
+                height $midi-duration $ease-cubic;
+    width: 0;
+    }
+.audio__progress {
+    background-color: $spot-ui-progress;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    }
+.audio__waves {
+    bottom: 3px;
+    height: 10px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+        // Temp for now
+        display: none;
+    }
+.audio__waveform {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: translate3d( 0, $audio-wave-size, 0 );
+    transition: opacity $ease-duration $ease-cubic,
+                transform $ease-duration $ease;
+    }
+.audio__fillmask {
+    height: 10px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: translate3d( 0, $audio-wave-size, 0 );
+    transition: opacity $ease-duration $ease-cubic,
+                transform $ease-duration $ease;
+    width: 0;
+    }
+.audio__wavefull {
+    }
+
+
+
+// Audio hovered state
+.audio.is-hovered {
+    .audio__scrubber {
+        height: $player-scrub-size-big;
+        }
+    .audio__waveform,
+    .audio__fillmask {
+        opacity: 1;
+        transform: translate3d( 0, 0, 0 );
+        }
+    .media__time,
+    .media__duration {
+        bottom: -30px;
+        opacity: 1;
+        }
+}
+
+
+
+// When the media is loaded
+.audio.is-loaded {
+    
+}
+
+// When the media has been interacted with, played
+.audio.is-active {
+    .audio__scrubber {
+        width: 100%;
+        }
+}
+
+
+
+/******************************************************************************
+ * Media shared components
+ * @todo: scrubber + progress could go here as well
+*******************************************************************************/
+.media__time,
+.media__duration {
+    bottom: -14px;
+    color: $dark;
+    font-size: 14px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity $ease-duration $ease-cubic,
+                bottom $ease-duration $ease;
+    @include display-regular();
+    @include font-sans-display();
+    }
+.media__time {
+    left: 0;
+    }
+.media__duration {
+    right: 0;
+
+    &:after {
+        background-color: $dark;
+        bottom: 0;
+        content: "";
+        left: -10px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity $ease-duration $ease-cubic;
+        width: 1px;
+        }
+
+    &.is-static:after {
+        opacity: 1;
+        }
+    }

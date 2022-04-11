@@ -1,0 +1,23 @@
+<section class="video <% if layout.autoplay %>video--autoplay<% end %> js-video aspect--<%= layout.aspect %>" data-id="<%= layout.id %>" data-src="<%= layout.src %>">
+    <video class="video__video js-video-el" <% if layout.autoplay %>autoplay<% end %> <% if layout.loop %>loop<% end %>></video>
+    <% if layout.poster %>
+        <div class="video__poster js-video-poster -cover" data-img-src="<%= layout.poster %>"></div>
+    <% end %>
+    <% if layout.title %>
+        <div class="video__title js-video-title lockup--play">
+            <span class="icon--faux icon--play icon--light">
+                <span class="icon--faux__wrap icon--play__wrap"></span>
+            </span>
+            <span class="meta -span -light"><%= layout.title %></span>
+        </div>
+    <% end %>
+    <% if layout.thumb %>
+        <video class="video__thumb js-video-thumb" data-id="<%= layout.thumb.id %>" data-src="<%= layout.thumb.src %>"></video>
+        <div class="video__scrubber js-video-scrubber">
+            <div class="video__buffered js-video-buffered"></div>
+            <div class="video__progress js-video-progress"></div>
+        </div>
+        <div class="media__time js-media-time"></div>
+        <div class="media__duration js-media-duration"></div>
+    <% end %>
+</section>

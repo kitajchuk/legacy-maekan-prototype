@@ -1,0 +1,45 @@
+.header {
+    font-size: 0;
+    left: 0;
+    padding: $header-padding $header-padding 0;
+    position: fixed;
+    top: 0;
+    transition: opacity $ease-duration $ease-cubic,
+                transform $ease-duration $ease-cubic;
+    width: 100%;
+    z-index: $z_layer_02;
+    }
+.header__icon {
+    color: $dark;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: opacity $ease-duration $ease,
+                visibility $ease-duration $ease,
+                transform $ease-duration $ease-cubic;
+    vertical-align: middle;
+
+    &.is-inactive {
+        opacity: 0;
+        visibility: hidden;
+        }
+    }
+.header__col {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    }
+.header__utility {
+    text-align: right;
+    }
+.header__audio {
+    display: none;
+    }
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .header {
+        padding: $mobile-padding $mobile-padding 0;
+        }
+}

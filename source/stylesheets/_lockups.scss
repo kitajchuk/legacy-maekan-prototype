@@ -1,0 +1,9 @@
+.lockup--play {
+    cursor: pointer;
+    font-size: 0;
+
+    // icon + text
+    span + span {
+        margin-left: 20px;
+        }
+}

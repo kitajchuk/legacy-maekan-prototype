@@ -1,0 +1,14 @@
+.linklist {
+    .feed__item--linklist {
+        vertical-align: top;
+        }
+}
+.linklist__title {
+    }
+.linklist__copyline {
+    @include font-sans-display();
+    @include display-light();
+    }
+.linklist__meta {
+    margin-top: 6px;
+    }

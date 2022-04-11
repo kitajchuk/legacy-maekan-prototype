@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Feed",
+        "url": "/",
+        "topic": "Everything"
+    },
+    {
+        "title": "Features",
+        "url": "/features/",
+        "topic": "Features"
+    },
+    {
+        "title": "News",
+        "url": "/news/",
+        "topic": "News"
+    },
+    {
+        "title": "Links",
+        "url": "/links/",
+        "topic": "Links"
+    },
+    {
+        "title": "Gallery",
+        "url": "/gallery/"
+    },
+    {
+        "title": "Search",
+        "url": "/search/"
+    }
+]

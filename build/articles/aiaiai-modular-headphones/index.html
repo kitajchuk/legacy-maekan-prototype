@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html manifest="">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- Mmmeta -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="apple-touch-icon-precomposed" href="http://maekan:m43k4n@52.25.229.84images/touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="Maekan" />
+
+        <!-- Favicon -->
+        <link href="/favicon.png?v=0.2.0" rel="icon" type="image/0" />
+
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title>Article // Maekan</title>
+
+        <link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header class="header js-header">
+    <section class="header__col">
+        <button class="button header__icon header__list js-controller--navbar">
+            <span class="icon--faux icon--list js-navbar-toggle">
+                <span class="icon--faux__wrap icon--list__wrap"></span>
+            </span>
+        </button>
+    </section>
+    <section class="header__col header__utility js-utility">
+        <button class="button header__icon header__audio js-audio-wave">
+            <span class="icon--faux icon--audio">
+                <span class="icon--faux__wrap icon--audio__wrap">
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                    <span class="icon--audio__bar"></span>
+                </span>
+            </span>
+        </button>
+    </section>
+</header>
+        <nav class="navbar js-navbar">
+    <div class="navbar__wrap">
+        <ul class="nav">
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/index.html" data-topic="Everything">Feed</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/features/index.html" data-topic="Features">Features</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/news/index.html" data-topic="News">News</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/links/index.html" data-topic="Links">Links</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/gallery/index.html" data-topic="">Gallery</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item " href="/search/index.html" data-topic="">Search</a>
+                </li>
+        </ul>
+        <ul class="subnav">
+                <li class="subnav__li">
+                    <a class="subnav__a title__grey__medium js-subnav-item " href="#">About</a>
+                </li>
+                <li class="subnav__li">
+                    <a class="subnav__a title__grey__medium js-subnav-item " href="#">Follow Us</a>
+                </li>
+                <li class="subnav__li">
+                    <a class="subnav__a title__grey__medium js-subnav-item " href="#">Legal</a>
+                </li>
+        </ul>
+    </div>
+    <a href="/account/index.html" class="navbar__account">
+        <span class="avatar js-lazy-image -span -cover js-account-avatar" data-img-src="/images/avatar.jpg"></span>
+        <span class="navbar__account__name title__grey__small -span">Eugene Kan</span>
+    </a>
+</nav>
+        <main class="pages js-pages">
+            <div class="page js-page">
+                <article class="article js-article">
+    
+</article>
+            </div>
+        </main>
+        <button class="refine-button button button--dark js-controller--refine is-inactive">
+    <span class="refine-button__icon refine-button__open icon icon--refine js-icon-refine"></span>
+    <span class="refine-button__icon refine-button__close icon icon--check js-icon-check"></span>
+</button>
+
+
+<section class="refine js-refine screen">
+    <div class="screen__wrap valigner">
+        <div class="valigner__cell">
+            <div class="refine__sort">
+                <div class="screen__label">Sort</div>
+                <ul class="refine__sort__ul">
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Everything">Everything</li>
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Popular">Popular</li>
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Features">Features</li>
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="News">News</li>
+                        <li class="refine__sort__li title__grey js-refine-topic " data-topic="Links">Links</li>
+                </ul>
+            </div>
+            <div class="refine__filter">
+                <div class="screen__label">Filter</div>
+                <ul class="refine__filter__ul">
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Art &amp; Design</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Business</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Fashion</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Food &amp; Culture</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Music</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Product</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Sports</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Tech</li>
+                        <li class="refine__filter__li title__grey__medium js-refine-category">Travel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+        <div class="overlay js-overlay"></div>
+        <div class="loader js-controller--load">
+    <span class="icon icon--arrow-down"></span>
+</div>
+        <section class="loadin js-loadin screen is-active">
+    <div class="valigner">
+        <div class="valigner__cell">
+            <img class="maekan" src="/images/svg/icon--mae--light.svg" />
+            <img class="maekan" src="/images/svg/icon--kan--light.svg" />
+        </div>
+    </div>
+    <div class="loadin__bar js-bar"></div>
+</section>
+        <script src="/javascripts/dist/app.js" type="text/javascript"></script>
+    </body>
+</html>

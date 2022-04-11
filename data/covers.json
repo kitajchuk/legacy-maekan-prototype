@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Barbecue with Strangers <br /> &mdash; <span class=\"em\">Seoul Korea</span>",
+        "category": "Food &amp; Culture / Tech",
+        "image": "/images/feed/desktop_cover_seoul.jpg",
+        "caption": "Sterling was a diminutive kid, and whilst the small player is cherished in the modern game, there were times when he was underestimated.",
+        "image_mobile": "/images/feed/mobile/mobile_cover_seoul_small.jpg",
+        "feature": true,
+        "inverted_type": false,
+        "layout": {
+            "image": "is-center",
+            "type": "is-left is-middle",
+            "nav": ""
+        }
+    }
+]

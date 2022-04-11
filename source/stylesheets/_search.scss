@@ -1,0 +1,123 @@
+.search {
+    height: 100vh;
+    position: relative;
+
+    ::-webkit-input-placeholder {
+        color: $grey-ultralight !important;
+        }
+    :-moz-placeholder {
+        color: $grey-ultralight !important;
+        }
+    :-ms-input-placeholder {
+        color: $grey-ultralight !important;
+        }
+    }
+.search__field {
+    left: 0;
+    margin-top: -240px;
+    padding-top: $feed-padding * 2;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transition: margin-top $ease-duration $ease,
+                top $ease-duration $ease,
+                position $ease-duration $ease;
+    }
+.search__field + .feed {
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: calc( 50% + 40px );
+    transform: translate3d( 0, 0, 0 );
+    transition: top $ease-duration $ease,
+                position $ease-duration $ease,
+                opacity $ease-duration $ease,
+                transform $ease-duration $ease,
+                visibility $ease-duration $ease;
+
+    &.is-unloaded {
+        opacity: 0;
+        }
+    &.is-updating {
+        opacity: 0;
+        transform: translate3d( 0, $navbar-size, 0 );
+        }
+}
+.search__input {
+    background-color: transparent;
+    border: 0;
+    height: $navbar-size;
+    left: 0;
+    outline: 0;
+    position: absolute;
+    padding: 0;
+    text-align: left;
+    top: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    z-index: $z_layer_01;
+    }
+.search__query {
+    color: $dark;
+    position: relative;
+    text-align: center;
+    }
+.search__suggest {
+    color: $grey-ultralight;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+        // TEMP
+        display: none;
+    }
+.search__bar {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    }
+.search__icon {
+    cursor: pointer;
+    height: $navbar-size;
+    line-height: $navbar-size + 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: $z_layer_02;
+    }
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .search__input {
+        height: auto;
+        }
+    .search__input,
+    .search-results {
+        left: 0;
+        margin: 0;
+        width: 100%;
+        }
+
+    .search {
+        height: calc( 100vh - #{$navbar-size} );
+        }
+    .search__field {
+        margin-top: 0;
+        padding-bottom: $mobile-padding;
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
+        padding-top: 0;
+        position: relative;
+        top: 0;
+        }
+    .search__field + .feed {
+        position: relative;
+        top: 0;
+        }
+    .search__bar {
+        width: 100%;
+        }
+}

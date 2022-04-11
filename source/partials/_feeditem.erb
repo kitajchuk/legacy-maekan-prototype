@@ -1,0 +1,9 @@
+<a class="feed__item" href="<%= item.url || '#' %>">
+    <div class="feed__cover">
+        <img class="feed__image image js-lazy-image" data-img-src="<%= item.image %>" />
+    </div>
+    <div class="feed__lock">
+        <div class="feed__title title a-link"><%= item.title %></div>
+        <div class="meta meta--locked"><%= item.category %></div>
+    </div>
+</a>

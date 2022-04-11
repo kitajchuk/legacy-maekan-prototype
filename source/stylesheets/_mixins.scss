@@ -1,0 +1,199 @@
+// Sans-serif text
+@mixin font-sans-text() {
+    font-family: $sans-serif-text;
+    font-stretch: normal;
+    font-style: normal;
+}
+@mixin font-sans-display() {
+    font-family: $sans-serif-display;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+
+
+// Serif text
+@mixin font-serif-text() {
+    font-family: $serif-text;
+    font-stretch: normal;
+    font-style: normal;
+}
+@mixin font-serif-display() {
+    font-family: $serif-display;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+
+
+// Text regular weights/styles
+@mixin text-regular() {
+    font-weight: 400;
+}
+@mixin text-regular-italic() {
+    font-weight: 400;
+    font-style: italic;
+}
+@mixin text-semibold() {
+    font-weight: 600;
+}
+@mixin text-semibold-italic() {
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+// Text display weights/styles
+@mixin display-light() {
+    font-weight: 300;
+}
+@mixin display-light-italic() {
+    font-weight: 300;
+    font-style: italic;
+}
+@mixin display-medium() {
+    font-weight: 500;
+}
+@mixin display-medium-italic() {
+    font-weight: 500;
+    font-style: italic;
+}
+@mixin display-regular() {
+    font-weight: 400;
+}
+@mixin display-semibold() {
+    font-weight: 600;
+}
+
+
+
+// Typography lockups
+@mixin type-lock() {
+    font-size: $title-size-px;
+    line-height: 1.66666667;
+    @include display-light();
+    @include font-sans-display();
+}
+@mixin type-lock-grey() {
+    color: $grey-dark;
+    @include type-lock();
+    @include ani-grey-type();
+}
+@mixin type-lock-grey-medium() {
+    color: $grey-dark;
+    font-size: $title-size-small-px;
+    line-height: 2.09090909;
+    @include display-light();
+    @include font-sans-display();
+    @include ani-grey-type();
+}
+@mixin type-lock-grey-small() {
+    color: $grey-dark;
+    font-size: $meta-size;
+    @include display-light();
+    @include font-sans-display();
+    @include ani-grey-type();
+}
+
+
+
+// Title lockups
+@mixin title-image-lock() {
+    color: $dark;
+    font-size: $title-size-px;
+    line-height: 1.2;
+    @include font-sans-display();
+    @include display-light();
+}
+@mixin title-image-lock-serif() {
+    color: $dark;
+    font-size: $title-size-serif-px;
+    line-height: 1.2;
+    @include font-serif-display();
+    @include display-light();
+}
+@mixin title-type-lock() {
+    color: $dark;
+    font-size: $title-size-big-vw;
+    line-height: 1.08695652;
+    @include font-sans-display();
+    @include display-light();
+}
+@mixin title-type-lock-serif() {
+    color: $dark;
+    font-size: $title-size-big-serif-vw;
+    line-height: 1.08695652;
+    @include font-serif-display();
+    @include display-light();
+}
+
+
+
+// Meta lockups
+@mixin meta-type() {
+    color: $dark;
+    font-size: $meta-size;
+    line-height: 1.8;
+    @include font-serif-text();
+    @include text-regular();
+}
+
+
+
+
+// Articles
+@mixin p() {
+    font-size: $p-size;
+    line-height: 1.90909091;
+    @include font-serif-text();
+    @include text-regular();
+}
+@mixin h1() {
+    font-size: $h1-size;
+    line-height: 1.0357;
+    @include font-sans-display();
+    @include display-light();
+}
+@mixin h2() {
+    font-size: $h2-size;
+    line-height: 1.27272727;
+    @include font-sans-display();
+    @include display-light();
+}
+@mixin bq() {
+    font-size: $bq-size;
+    line-height: 1.52631579;
+    @include font-serif-display();
+    @include display-light();
+}
+
+
+
+// Animations
+@mixin ani-lift-block() {
+    transform: translate3d( 0, $item-padding, 0 );
+    transition: transform $ease-duration $ease;
+
+    &.is-active {
+        transform: translate3d( 0, 0, 0 );
+        }
+    &.is-loading {
+        transform: translate3d( 0, ($item-padding * 2), 0 );
+        }
+}
+@mixin ani-move-block() {
+    transition: transform $ease-duration $ease,
+                opacity $ease-duration $ease-cubic;
+}
+@mixin ani-move-block-delayed( $delay: 200ms ) {
+    transition: opacity $ease-duration $ease $delay,
+                transform $ease-duration $ease $delay;
+}
+@mixin ani-grey-type() {
+    transition: color $ease-duration $ease;
+
+    &.is-active {
+        color: $white;
+        }
+}

@@ -1,0 +1,47 @@
+.kop {
+    padding-bottom: 270px;
+    padding-top: 270px;
+    position: relative;
+
+    &:before {
+        color: $dark;
+        content: attr(data-section);
+        font-size: 16px;
+        left: ($feed-padding / 2);
+        position: absolute;
+        top: ($feed-padding / 2);
+        @include font-sans-display();
+        @include display-light();
+        }
+    }
+
+
+
+// Overrides for this page
+.kop {
+    .feed__item {
+        margin-bottom: 0 !important;
+        max-width: 500px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        }
+    .feed__lock {
+        padding: 0 !important;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .kop {
+        padding-bottom: $feed-padding * 2;
+        padding-top: $feed-padding * 2;
+
+        &:before {
+            left: $mobile-padding;
+            top: $mobile-padding;
+            }
+        }
+}

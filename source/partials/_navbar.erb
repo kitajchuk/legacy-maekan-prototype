@@ -1,0 +1,22 @@
+<nav class="navbar js-navbar">
+    <div class="navbar__wrap">
+        <ul class="nav">
+            <% data.navigation.each do |nav| %>
+                <li class="nav__li">
+                    <a class="nav__a title__grey js-navbar-item <% if nav.title == current_page.data.title %>is-active<% end %>" href="<%= nav.url %>" data-topic="<%= nav.topic %>"><%= nav.title %></a>
+                </li>
+            <% end %>
+        </ul>
+        <ul class="subnav">
+            <% data.subnav.each do |subnav| %>
+                <li class="subnav__li">
+                    <a class="subnav__a title__grey__medium js-subnav-item <% if subnav.title == current_page.data.title %>is-active<% end %>" href="<%= subnav.url %>"><%= subnav.title %></a>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+    <a href="/account/" class="navbar__account">
+        <span class="avatar js-lazy-image -span -cover js-account-avatar" data-img-src="<%= data.user.avatar %>"></span>
+        <span class="navbar__account__name title__grey__small -span"><%= data.user.name %></span>
+    </a>
+</nav>

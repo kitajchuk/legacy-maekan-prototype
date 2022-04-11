@@ -1,0 +1,67 @@
+.drawer-header {
+    background-color: $white;
+    border-bottom: 1px solid $grey-ultralight;
+    height: $navbar-size;
+    left: 0;
+    line-height: $navbar-size;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $z_layer_04;
+    }
+.drawer-header__button {
+    color: $dark;
+    display: block;
+    font-size: 0;
+    height: $navbar-size;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $navbar-size;
+    z-index: $z_layer_infront;
+    }
+.drawer-header__label {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    }
+
+
+
+.drawer-content {
+    background-color: $white;
+    height: 100vh;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: ($navbar-size + ($mobile-padding / 2)) ($mobile-padding / 2) ($mobile-padding / 2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    z-index: $z_layer_03;
+    }
+.drawer-content__wrap {
+    
+    }
+
+
+
+.drawer-header,
+.drawer-content {
+    transform: translate3d( 100%, 0, 0 );
+    transition: transform $ease-duration $ease-cubic,
+                visibility $ease-duration $ease-cubic;
+    visibility: hidden;
+    }
+
+
+
+.drawer-header__button,
+.drawer-header__label,
+.drawer-content__wrap {
+    opacity: 0;
+    transform: translate3d( $navbar-size, 0, 0 );
+    transition: opacity $ease-duration $ease-cubic $fast-duration,
+                transform $ease-duration $ease-cubic $fast-duration;
+    }

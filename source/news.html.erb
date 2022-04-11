@@ -1,0 +1,16 @@
+---
+title: News
+topic: News
+controller: app
+---
+<%
+@collection = data.feed
+%>
+<%= partial "partials/refine-label.erb" %>
+
+
+<section class="feed feed--center js-feed" data-page="0" data-pages="5">
+    <% @collection.each do |item| %>
+        <%= partial "partials/feeditem", :locals => { :item => item } %>
+    <% end %>
+</section>

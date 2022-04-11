@@ -1,0 +1,260 @@
+/******************************************************************************
+ * Document Scroll
+*******************************************************************************/
+.is-clipped {
+    overflow: hidden;
+}
+
+.is-scrolling {
+    pointer-events: none;
+}
+
+.is-scrolling-down {
+    .header {
+        opacity: 0;
+        }
+}
+
+
+
+/******************************************************************************
+ * Routing
+*******************************************************************************/
+.is-routing {
+    .header,
+    .refine-button {
+        opacity: 0;
+        }
+}
+
+
+
+/******************************************************************************
+ * Audio / Video
+*******************************************************************************/
+.is-audio-active {
+    .header__audio {
+        display: inline-block;
+        }
+
+    .icon--audio__bar {
+        &:nth-child(1) {
+            animation-name: bar_1;
+            }
+        &:nth-child(2) {
+            animation-name: bar_2;
+            }
+        &:nth-child(3) {
+            animation-name: bar_3;
+            }
+        &:nth-child(4) {
+            animation-name: bar_4;
+            }
+        &:nth-child(5) {
+            animation-name: bar_5;
+            }
+        }
+}
+
+.is-cinematic-moment {
+    .page,
+    .pages {
+        background-color: $black;
+        }
+
+    .wrapper--hr {
+        border-bottom-color: transparent;
+        }
+}
+
+
+
+/******************************************************************************
+ * Load More
+*******************************************************************************/
+.is-loader-moment {
+    .refine-button {
+        opacity: 0;
+        visibility: hidden;
+        }
+}
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .is-feed-loadable {
+        .page {
+            padding-bottom: $feed-padding;
+            }
+    }
+}
+
+
+
+/******************************************************************************
+ * Cover Pages
+*******************************************************************************/
+.is-cover-page {
+    background-color: $dark;
+    
+    body {
+        background-color: $dark;
+        }
+}
+
+.is-cover-moment {
+    .cover__lock {
+        opacity: 1;
+        transform: translate3d( 0, 0, 0 );
+        }
+
+    .refine-button {
+        opacity: 0;
+        visibility: hidden;
+        }
+}
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    html:not(.is-cover-page) {
+        padding-top: $feed-padding;
+        }
+
+    .is-cover-page {
+        .feed__item:first-child {
+            padding-top: ($mobile-padding / 2);
+            }
+
+        .feed__item--linklist:first-child {
+            padding-top: 75px;
+            }
+    }
+
+    .is-cover-moment {
+        .cover__lock {
+            opacity: 1;
+            transition: none;
+            transform: translate3d( 0, 0, 0 );
+            visibility: visible;
+            }
+    }
+}
+
+
+
+/******************************************************************************
+ * Navbar Open
+*******************************************************************************/
+.is-navbar-open {
+    overflow: hidden;
+
+    .navbar {
+        transform: translate3d( 0, 0, 0 );
+        }
+
+    .navbar__wrap,
+    .navbar__account {
+        opacity: 1;
+        transform: translate3d( 0, 0, 0 );
+        }
+
+    .navbar + .pages {
+        transform: translate3d( $drawer-size, 0, 0 );
+        }
+
+    .navbar + .pages + .refine-button {
+        opacity: 0;
+        visibility: hidden;
+        }
+
+    .header {
+        opacity: 0;
+        transform: translate3d( $drawer-size, 0, 0 );
+        }
+
+    .overlay {
+        opacity: 0.25;
+        visibility: visible;
+        z-index: $z_layer_01;
+        }
+}
+
+.is-navbar-light {
+    .header__icon {
+        color: $white;
+        }
+
+    .icon--audio__bar {
+        background-color: $white;
+        }
+
+    .icon--list__wrap {
+        border-top-color: $white;
+
+        &:after,
+        &:before {
+            background-color: $white;
+            }
+        }
+}
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .is-navbar-open {
+        .navbar + .pages {
+            transform: translate3d( $drawer-size, 0, 0 );
+            }
+    }
+}
+
+@media only screen and ( max-width: $break-navbar-mobile ) {
+    $mobile-drawer-size: calc( 100vw - #{$navbar-size} );
+
+    .is-navbar-open {
+        .navbar + .pages {
+            transform: translate3d( $mobile-drawer-size, 0, 0 );
+            }
+
+        .header {
+            transform: translate3d( $mobile-drawer-size, 0, 0 );
+            }
+    }
+}
+
+
+
+/******************************************************************************
+ * Search Results
+*******************************************************************************/
+.is-search-results {
+    .search__field {
+        margin-top: 0;
+        position: relative;
+        top: 0;
+        }
+    .search__field + .feed {
+        position: relative;
+        top: 0;
+        }
+}
+
+
+
+/******************************************************************************
+ * Off Canvas Drawer
+*******************************************************************************/
+.is-drawer-open {
+    .pages,
+    .header {
+        transform: translate3d( -$navbar-size, 0, 0 );
+        }
+
+    .drawer-header,
+    .drawer-content {
+        transform: translate3d( 0, 0, 0 );
+        visibility: visible;
+        }
+
+    .drawer-header__button,
+    .drawer-header__label,
+    .drawer-content__wrap {
+        opacity: 1;
+        transform: translate3d( 0, 0, 0 );
+        }
+}

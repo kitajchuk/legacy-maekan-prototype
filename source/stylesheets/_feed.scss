@@ -1,0 +1,131 @@
+// Primary Feed
+.feed {
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: $navbar-size;
+    padding-left: $feed-padding;
+    padding-right: $feed-padding;
+    padding-top: $feed-padding * 2;
+    text-align: left;
+    }
+.feed--center {
+    text-align: center;
+    }
+.feed--right {
+    text-align: right;
+    }
+.feed + .feed {
+    padding-top: 0;
+    }
+.feed__item {
+    display: inline-block;
+    margin-bottom: $feed-margin;
+    padding-left: $item-padding;
+    padding-right: $item-padding;
+    position: relative;
+    vertical-align: middle;
+    width: 33.33333%;
+    @include ani-lift-block();
+    }
+.feed__item--linklist {
+    padding-right: 100px;
+    text-align: left;
+    }
+.feed__item--gallery {
+    cursor: pointer;
+    margin-bottom: $item-padding + $navbar-size;
+    }
+.feed__cover {
+    position: relative;
+    }
+.feed__image {
+    }
+.feed__lock {
+    padding-top: 25px;
+    text-align: left;
+    }
+.feed__title {
+    }
+
+
+
+@media only screen and ( max-width: $break-desktop ) {
+    .feed {
+        padding-left: 0;
+        padding-right: 0;
+        }
+    .feed__item {
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-tablet-full ) {
+    .feed__item {
+        width: 50%;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-laptop-full ) {
+    .feed,
+    .feed__item {
+        padding-left: $item-padding / 2;
+        padding-right: $item-padding / 2;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    $gutter-spacing: ($mobile-padding / 2);
+    $gutter-bottom: 75px;
+    $gutter-top: 50px;
+    $gutter-top-half: ($gutter-top / 2);
+
+    .feed {
+        margin: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        }
+    .feed__item {
+        display: block;
+        margin: 0;
+        padding: 0 $gutter-spacing $gutter-bottom;
+        width: 100%;
+        }
+    // Disable mobile transitions
+    .feed__item,
+    .feed__item.is-active,
+    .feed__item.is-loading {
+        transition: opacity $ease-duration $ease-cubic;
+        transform: translate3d( 0, 0, 0 );
+        }
+    .feed__lock {
+        padding: $gutter-top-half ($mobile-padding * 2) 0 $gutter-spacing;
+        position: static;
+        width: 100%;
+        }
+
+    // Spacing relationships
+    .feature + .feed__item,
+    .feed__item + .feed__linklist,
+    .feed__linklist + .feed__item {
+        padding-top: $gutter-top;
+        }
+
+    // Links
+    .feed__item--linklist {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding * 2;
+        }
+
+    // Gallery
+    .feed__item--gallery {
+        padding-bottom: $mobile-padding / 2;
+        }
+}

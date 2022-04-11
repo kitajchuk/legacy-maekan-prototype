@@ -1,0 +1,15 @@
+<section class="audio audio--inline js-audio js-audio--<%= layout.id %>" data-id="<%= layout.id %>" data-src="<%= layout.src %>" data-channel="<%= layout.channel %>">
+    <div class="audio__track js-audio-track">
+        <div class="audio__waves js-audio-waves">
+            <canvas class="audio__waveform js-audio-waveform" height="10" width="100%"></canvas>
+            <div class="audio__fillmask js-audio-fillmask">
+                <canvas class="audio__wavefull js-audio-wavefull" height="10" width="100%"></canvas>
+            </div>
+        </div>
+        <div class="audio__scrubber js-audio-scrubber">
+            <div class="audio__progress js-audio-progress"></div>
+        </div>
+        <div class="media__time js-media-time"></div>
+        <div class="media__duration js-media-duration"></div>
+    </div>
+</section>

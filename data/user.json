@@ -1,0 +1,28 @@
+{
+    "name": "Eugene Kan",
+    "avatar": "/images/avatar.jpg",
+    "navigation": [
+        {
+            "title": "Reading List",
+            "url": "#readinglist",
+            "is_active": true,
+            "is_logout": false
+        },
+        {
+            "title": "Profile",
+            "is_active": false,
+            "is_logout": false
+        },
+        {
+            "title": "Settings",
+            "is_active": false,
+            "is_logout": false
+        },
+        {
+            "title": "Sign Out",
+            "url": "/",
+            "is_active": false,
+            "is_logout": true
+        }
+    ]
+}

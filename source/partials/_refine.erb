@@ -1,0 +1,28 @@
+<button class="refine-button button button--dark js-controller--refine is-inactive">
+    <span class="refine-button__icon refine-button__open icon icon--refine js-icon-refine"></span>
+    <span class="refine-button__icon refine-button__close icon icon--check js-icon-check"></span>
+</button>
+
+
+<section class="refine js-refine screen">
+    <div class="screen__wrap valigner">
+        <div class="valigner__cell">
+            <div class="refine__sort">
+                <div class="screen__label">Sort</div>
+                <ul class="refine__sort__ul">
+                    <% data.topics.each do |top| %>
+                        <li class="refine__sort__li title__grey js-refine-topic <% if top == current_page.data.topic %>is-active<% end %>" data-topic="<%= top %>"><%= top %></li>
+                    <% end %>
+                </ul>
+            </div>
+            <div class="refine__filter">
+                <div class="screen__label">Filter</div>
+                <ul class="refine__filter__ul">
+                    <% data.categories.each do |cat| %>
+                        <li class="refine__filter__li title__grey__medium js-refine-category"><%= cat %></li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
